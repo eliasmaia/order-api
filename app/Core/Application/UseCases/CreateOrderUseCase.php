@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Core\Application\UseCases;
+
+use App\Core\Domain\Entities\Order;
+use App\Core\Domain\Repositories\OrderRepositoryInterface;
+
 class CreateOrderUseCase
 {
     private OrderRepositoryInterface $orderRepository;
@@ -12,7 +17,7 @@ class CreateOrderUseCase
     {
         $order = new Order($customerEmail, $totalAmount);
 
-        $this->orderRepository->save(order);
+        $this->orderRepository->save($order);
 
         return $order;
     }

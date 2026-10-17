@@ -2,7 +2,7 @@
 
 namespace App\Core\Domain\Repositories;
 
-use App\Domain\Entities\Order;
+use App\Core\Domain\Entities\Order;
 
 interface OrderRepositoryInterface
 {

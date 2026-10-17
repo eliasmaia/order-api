@@ -2,8 +2,10 @@
 
 namespace App\Core\Infrastructure\Persistence\Eloquent;
 
+use Illuminate\Database\Eloquent\Model;
+
 class OrderModel extends Model {
-    protector $table = 'order_models';
+    protected $table = 'order_models';
     public $incrementing = false;
     protected $keyType = 'string';
 
@@ -12,5 +14,5 @@ class OrderModel extends Model {
         'customer_email',
         'total_amount',
         'status'
-    ]
+    ];
 }
